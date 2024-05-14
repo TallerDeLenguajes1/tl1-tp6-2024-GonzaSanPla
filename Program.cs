@@ -39,3 +39,22 @@ if(int.TryParse(num, out i))
     Console.WriteLine("NO es un numero");
 }
 
+
+//  ----------INICIO PUNTO 2 ----------
+
+string eleccion="10";
+
+while(eleccion!="0")
+{   
+    while(eleccion!="0"||eleccion!="1"||eleccion!="2"||eleccion!="3"||eleccion!="4")
+    {
+        Console.WriteLine("Elija que operacion desea realizar:\n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir\n0-Sali");
+        eleccion=Console.ReadLine();
+    }
+    switch (eleccion)
+    {
+        case "1":
+
+    }
+
+}
