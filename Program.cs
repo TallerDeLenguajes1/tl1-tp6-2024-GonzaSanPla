@@ -13,7 +13,7 @@ Console.WriteLine("Valor de b:"+b);
 */
 //  ----------INICIO PUNTO 1 ----------
 int i=0,inv=0;
-string num="";
+string? num="";
 
 Console.WriteLine("Ingrese un numero:");
 num=Console.ReadLine();
@@ -41,7 +41,7 @@ if(int.TryParse(num, out i))
 
 //  ----------INICIO PUNTO 2 ----------
 
-string eleccion="a",numS1="",numS2="";
+string? eleccion="a",numS1="",numS2="";
 int num1=0,num2=0,resultado=0;
 
 
@@ -52,7 +52,7 @@ while(eleccion!="0")
     {   
         while(eleccion!="0"&&eleccion!="1"&&eleccion!="2"&&eleccion!="3"&&eleccion!="4")
         {
-            Console.WriteLine("\nElija que operacion desea realizar:\n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividirn0-Salir");
+            Console.WriteLine("\nElija que operacion desea realizar:\n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividir\n0-Salir");
             eleccion=Console.ReadLine();
             if(eleccion!="0" && eleccion!="5")
             {
@@ -63,7 +63,7 @@ while(eleccion!="0")
             } 
         }
 
-        if(double.TryParse(numS1, out num1)&&double.TryParse(numS2, out num2))
+        if(int.TryParse(numS1, out num1)&&int.TryParse(numS2, out num2))
         {
             switch (eleccion)
             {
