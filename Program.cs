@@ -39,3 +39,65 @@ if(int.TryParse(num, out i))
     Console.WriteLine("NO es un numero");
 }
 
+//  ----------INICIO PUNTO 2 ----------
+
+string eleccion="a",numS1="",numS2="";
+int num1=0,num2=0,resultado=0;
+
+
+while(eleccion!="0")
+{   
+   
+    while(eleccion!="0")
+    {   
+        while(eleccion!="0"&&eleccion!="1"&&eleccion!="2"&&eleccion!="3"&&eleccion!="4")
+        {
+            Console.WriteLine("\nElija que operacion desea realizar:\n1-Sumar \n2-Restar \n3-Multiplicar \n4-Dividirn0-Salir");
+            eleccion=Console.ReadLine();
+            if(eleccion!="0" && eleccion!="5")
+            {
+                Console.WriteLine("\nIngrese el primer numero para operar:");
+                numS1=Console.ReadLine();
+                Console.WriteLine("\nIngrese el segundo numero para operar:");
+                numS2=Console.ReadLine();
+            } 
+        }
+
+        if(double.TryParse(numS1, out num1)&&double.TryParse(numS2, out num2))
+        {
+            switch (eleccion)
+            {
+                case "1":
+                    resultado=num1+num2;
+                    break;
+
+                case "2":
+                    resultado=num1-num2;
+                    break;
+
+                case "3":
+                    resultado=num1*num2;
+                    break;
+
+                case "4":
+                    if(num2!=0)
+                    {
+                        resultado=num1/num2;
+                    }else
+                    {
+                        Console.WriteLine("No se puede divir en 0");
+                    }
+                        
+                    break;
+
+            }
+
+            Console.WriteLine("\nEl resultado es:"+ resultado);
+        }
+        if(eleccion!="0")
+        {
+            eleccion="A";
+        }
+    }
+
+}
