@@ -101,3 +101,46 @@ while(eleccion!="0")
     }
 
 }
+//  ----------INICIO PUNTO 3 ----------
+
+string? calcNumS="";
+float calcNum;
+
+do
+{
+    Console.WriteLine("\nIngrese un numero:");
+    calcNumS=Console.ReadLine();
+} while (!(float.TryParse(calcNumS,out calcNum)));
+
+Console.WriteLine("\n Valor abosluto:"+Math.Abs(calcNum));
+Console.WriteLine("\n Cuadrado :"+Math.Pow(calcNum,2));
+Console.WriteLine("\n Raiz cuadrada:"+Math.Sqrt(calcNum));
+Console.WriteLine("\n Seno:"+Math.Sin(calcNum));
+Console.WriteLine("\n Coseno:"+Math.Cos(calcNum));
+Console.WriteLine("\n Parte entera:"+Math.Truncate(calcNum));
+
+
+string? num1S="",num2S="";
+int num1,num2;
+
+do
+{
+    Console.WriteLine("\nIngrese el primer numero para comparar:");
+    num1S=Console.ReadLine();
+} while (!(int.TryParse(num1S,out num1)));
+
+do
+{
+    Console.WriteLine("\nIngrese el segundo numero para comparar:");
+    num2S=Console.ReadLine();
+} while (!(int.TryParse(num2S,out num2)));
+
+if(num1>num2)
+{
+     Console.WriteLine("El numero "+num1+" es el mayor");
+     Console.WriteLine("El numero "+num2+" es el menor");
+}else
+{
+    Console.WriteLine("El numero "+num2+" es el mayor");
+    Console.WriteLine("El numero "+num1+" es el menor");
+}
