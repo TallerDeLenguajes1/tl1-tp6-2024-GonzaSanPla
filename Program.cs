@@ -120,27 +120,27 @@ Console.WriteLine("\n Coseno:"+Math.Cos(calcNum));
 Console.WriteLine("\n Parte entera:"+Math.Truncate(calcNum));
 
 
-string? num1S="",num2S="";
-int num1,num2;
+string? numC1S="",numC2S="";
+int numC1,numC2;
 
 do
 {
     Console.WriteLine("\nIngrese el primer numero para comparar:");
-    num1S=Console.ReadLine();
-} while (!(int.TryParse(num1S,out num1)));
+    numC1S=Console.ReadLine();
+} while (!(int.TryParse(numC1S,out numC1)));
 
 do
 {
     Console.WriteLine("\nIngrese el segundo numero para comparar:");
-    num2S=Console.ReadLine();
-} while (!(int.TryParse(num2S,out num2)));
+    numC2S=Console.ReadLine();
+} while (!(int.TryParse(numC2S,out numC2)));
 
-if(num1>num2)
+if(numC1>numC2)
 {
-     Console.WriteLine("El numero "+num1+" es el mayor");
-     Console.WriteLine("El numero "+num2+" es el menor");
+     Console.WriteLine("El numero "+numC1+" es el mayor");
+     Console.WriteLine("El numero "+numC2+" es el menor");
 }else
 {
-    Console.WriteLine("El numero "+num2+" es el mayor");
-    Console.WriteLine("El numero "+num1+" es el menor");
+    Console.WriteLine("El numero "+numC2+" es el mayor");
+    Console.WriteLine("El numero "+numC1+" es el menor");
 }
